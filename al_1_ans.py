@@ -100,12 +100,18 @@ for i in range(4, -1, -1):
 print("\n12) "+("-"*30))
 for dan in range(2, 10):
     for i in range(1, 10):
-        print(f"{dan}*{i}={dan*i:2}", end=" ")
+        print(f" {dan} * {i} = {dan*i:2}", end=" | ")
     print()
 
 # 13
-print("\n13) "+("-"*30))
+print("\n12) "+("-"*30))
 for i in range(1, 10):
     for dan in range(2, 10):
-        print(f"{dan}*{i}={dan*i:2}", end=" ")
-    print()
+        print(f" {dan} * {i} = {dan*i:>2}", end=" | ")
+    print("",end="\n") # print()
+
+# f"{x:2}"    # 폭 2, 우측정렬(기본)
+# f"{x:<2}"   # 좌측정렬
+# f"{x:^2}"   # 가운데정렬
+# f"{x:>2}"   # 우측정렬(명시)
+# f"{x:02}"   # 빈칸 대신 0으로 채움
